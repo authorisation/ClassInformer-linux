@@ -9,6 +9,18 @@
    <iconset resource="ClassInformerRes.qrc">
     <normaloff>:/res/icon.png</normaloff>:/res/icon.png</iconset>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>292</width>
+    <height>260</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>292</width>
+    <height>260</height>
+   </size>
+  </property>
   <property name="modal">
    <bool>true</bool>
   </property>

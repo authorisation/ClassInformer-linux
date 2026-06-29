@@ -16,6 +16,15 @@ find_package(idasdk REQUIRED)
 
 set(IDA_PLUGIN_DIR "${CMAKE_BINARY_DIR}")
 
+# If build_qt was already run, force all Qt cmake dirs to the built Qt
+if(EXISTS "${CMAKE_BINARY_DIR}/qt-install/lib/cmake/Qt6")
+    set(_QT_CMAKE "${CMAKE_BINARY_DIR}/qt-install/lib/cmake")
+    foreach(_pkg Qt6 Qt6Core Qt6CoreTools Qt6Gui Qt6GuiTools Qt6Widgets Qt6WidgetsTools Qt6OpenGL Qt6OpenGLWidgets)
+        set(${_pkg}_DIR "${_QT_CMAKE}/${_pkg}" CACHE PATH "" FORCE)
+    endforeach()
+    unset(_QT_CMAKE)
+endif()
+
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 
 set(SOURCES

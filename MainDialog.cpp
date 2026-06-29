@@ -9,7 +9,7 @@
 MainDialog::MainDialog(bool &optionPlaceStructs, bool &optionProcessStatic, bool &optionAudioOnDone, SegSelect::segments &segs, qstring &version, size_t /*animSwitch*/) : QDialog(QApplication::activeWindow())
 {
     Ui::MainCIDialog::setupUi(this);
-    setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
+    setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint | Qt::MSWindowsFixedSizeDialogHint);
     buttonBox->addButton("CONTINUE", QDialogButtonBox::AcceptRole);
     buttonBox->addButton("CANCEL", QDialogButtonBox::RejectRole);
 

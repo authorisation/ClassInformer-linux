@@ -1556,7 +1556,7 @@ __declspec(dllexport)
 plugin_t PLUGIN =
 {
 	IDP_INTERFACE_VERSION,	// IDA version plug-in is written for
-    PLUGIN_FIX /*PLUGIN_PROC*/,        // Plug-in flags
+    PLUGIN_PROC,                       // Plug-in flags
 	init,	            // Initialization function
 	term,	            // Clean-up function
 	run,	            // Main plug-in body
