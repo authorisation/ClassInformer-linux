@@ -22,6 +22,7 @@
 // Windows type replacements
 // ============================================================================
 #ifndef _WIN32
+typedef int errno_t;
 typedef int32_t  BOOL;
 typedef uint32_t UINT32;
 typedef uint64_t UINT64;
